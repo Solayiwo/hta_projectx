@@ -1,0 +1,481 @@
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+.logo {
+  width: 100px;
+}
+
+header > div > nav > ul > li > a {
+  text-decoration: none;
+  color: crimson;
+  text-transform: lowercase;
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+header > div > nav > ul > li {
+  list-style: none;
+  display: inline;
+}
+
+.icon {
+  padding-right: 3px;
+}
+
+header > div > nav > ul > li > a:hover {
+  color: purple;
+}
+
+.yinyang {
+  border: none;
+  background-color: transparent;
+  color: crimson;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* .slider {
+  /* background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/aokigahara-forest-highly-detailed-style.jpg"); */
+/* width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom; */
+/* display: flex;
+  justify-content: center;
+  align-items: center; */
+/* } */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 82dvh;
+  /* overflow: visible; */
+  z-index: -1;
+}
+
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Ensures it stays above the carousel */
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-slider .item {
+  width: 100%;
+  height: 82dvh;
+  background-size: cover;
+  background-position: center;
+  animation: zoom-in-zoom-out 5s ease-in infinite;
+  animation-delay: 3s;
+}
+
+.hero-slider .owl-item {
+  opacity: 0; /*Default hidden state for all slides */
+}
+
+.hero-slider .owl-item.active {
+  opacity: 1; /*Fully visible only for the active slide */
+}
+
+.mouse-icon {
+  margin-top: 10px;
+  color: white;
+  font-size: 24px;
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%,
+  75%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-50deg);
+  }
+  50% {
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes zoom-in-zoom-out {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.cta {
+  border: 2px solid crimson;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: crimson;
+}
+
+.cta:hover {
+  border: none;
+  background-color: purple;
+  color: white;
+}
+
+.maggi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: crimson;
+  margin-top: 0;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.subtitle {
+  color: purple;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 24px;
+}
+
+.overview-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+p {
+  text-align: justify;
+}
+
+.grid-lock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .deskscreen {
+    display: none;
+  }
+
+  .tabscreen {
+    display: none;
+  }
+
+  .grid-lock {
+    display: none;
+  }
+
+  .mobilelock {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .subtitle {
+    grid-row: 1 !important; /* First row */
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .title {
+    grid-row: 2 !important; /* Second row */
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .image {
+    grid-row: 3 !important; /* Third row */
+  }
+
+  .text {
+    grid-row: 4 !important; /* Fourth row */
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-row: 1;
+    width: 100dvw;
+  }
+
+  .form {
+    grid-row: 2;
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .form-group .form-name {
+    grid-row: 1;
+    width: 100dvw;
+  }
+  .form-group .form-email {
+    grid-row: 2;
+  }
+
+  .form-group .form-phone {
+    grid-row: 3;
+    width: 100dvw;
+  }
+
+  .form-group .form-subject {
+    grid-row: 4;
+  }
+
+  .textarea textarea {
+    margin-right: 14px;
+    width: 100dvw;
+  }
+
+  .mobile-get {
+    text-align: center;
+  }
+
+  .footer .foot {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .footer .foot {
+    padding: 10px 20px;
+  }
+
+  .mobrow-1 {
+    grid-row: 1;
+  }
+
+  .mobrow-2 {
+    grid-row: 2;
+  }
+
+  .mobrow-3 {
+    grid-row: 3;
+  }
+
+  .mobrow-4 {
+    grid-row: 4;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobscreen {
+    display: none;
+  }
+
+  .mobilelock {
+    display: none;
+  }
+}
+
+.gta {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: crimson;
+  color: white;
+  font-weight: 600;
+}
+
+.gta::after {
+  content: " \2605";
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 40px 0;
+}
+
+.contact span {
+  font-weight: 600;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 5px 0;
+}
+
+.form-group input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid gray;
+  margin-right: 18px;
+  /* outline: none; */
+  width: 90%;
+}
+
+.form-group input:focus {
+  border-bottom: 2px solid black;
+}
+
+.textarea textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 40px 0;
+  outline: none;
+  resize: none;
+  margin-right: 18px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-container::before {
+  content: ""; /* This will later contain your icon */
+  position: absolute;
+  left: 10px; /*Adjust spacing as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  font-size: 16px; /* Adjust based on icon size */
+  pointer-events: none; /*Prevent the pseudo-element from blocking input interaction */
+}
+
+.form-name::before {
+  content: "\f007"; /* Unicode for user icon in Font Awesome */
+  font-family: "Font Awesome 5 Free"; /* Use the correct font family for icons */
+  font-weight: 900;
+}
+
+.form-email::before {
+  content: "\f0e0"; /* Unicode for email icon in Font Awesome */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.form-phone::before {
+  content: "\f095"; /* Unicode for phone icon in Font Awesome */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.form-subject::before {
+  content: "\f02d"; /* Unicode for pencil icon in Font Awesome */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.textarea::before {
+  content: "\f303"; /* Unicode for pencil icon in Font Awesome */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/* Style the inputs with padding to accommodate the icon */
+.input-container input,
+.input-container textarea {
+  padding-left: 40px;
+  height: 40px;
+}
+
+.textarea textarea:focus {
+  border-bottom: 2px solid black;
+}
+
+.gta2 {
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: crimson;
+  color: white;
+  font-weight: 600;
+}
+
+.call {
+  padding-right: 5px;
+  animation: flash 3s ease-in-out infinite;
+}
+
+.foot {
+  background-color: crimson;
+  color: white;
+  padding: 50px 80px;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.copyright p {
+  color: crimson;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: 600;
+}
+
+.social {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 6px;
+  margin-right: 6px;
+}
+.footer > div > div a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .foot > div > ul {
+  padding-left: 0;
+}
+
+.footer .foot > div > ul > li {
+  list-style: none;
+  letter-spacing: 2px;
+}
+
+.footer .foot > div > ul > li::before {
+  content: "\276F";
+  font-weight: 600;
+}
+
+.arrow-up i {
+  font-size: 36px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: crimson;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 99999;
+  animation: fadeIn 5s infinite, bounce 2s infinite;
+}
